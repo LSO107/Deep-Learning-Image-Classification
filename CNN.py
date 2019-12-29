@@ -9,7 +9,7 @@ from keras_preprocessing.image import ImageDataGenerator
 # create model
 model = Sequential()
 
-# add layers to network
+# add layers to neural network
 model.add(Conv2D(32, (3, 3), input_shape=(64, 64, 3), activation='relu'))
 model.add(MaxPooling2D(pool_size=(2, 2)))
 model.add(Flatten())
@@ -22,7 +22,7 @@ model.compile(optimizer='adam',
               loss='binary_crossentropy',
               metrics=['accuracy'])
 
-# modify the data
+# preprocess the dataset
 train_datagen = ImageDataGenerator(rescale=1. / 255,
                                    shear_range=0.2,
                                    zoom_range=0.2,
@@ -40,12 +40,12 @@ test_dataset = test_datagen.flow_from_directory('dataset/test_set',
                                                 batch_size=32,
                                                 class_mode='binary')
 
-# fit the model for accuracy
+# fit the model
 model.fit_generator(training_dataset,
-                    steps_per_epoch=1000,
-                    epochs=1,
+                    steps_per_epoch=4000,
+                    epochs=15,
                     validation_data=test_dataset,
-                    validation_steps=500)
+                    validation_steps=1000)
 
 # save the model
 model.save("ImageClassificationModel.h5")
