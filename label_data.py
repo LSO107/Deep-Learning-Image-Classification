@@ -1,4 +1,5 @@
 from PIL import Image
+import constants as c
 import numpy as np
 import cv2
 import os
@@ -11,14 +12,14 @@ uninfected = os.listdir("cell_images/Uninfected/")
 images = []
 labels = []
 
-print('Beginning preprocessing images...')
+print('Starting image preprocessing...')
 
-# Preprocess the images
+# label and resize data
 for i in infected:
     try:
         image = cv2.imread("cell_images/Parasitized/" + i)
         image_array = Image.fromarray(image, 'RGB')
-        resize_img = image_array.resize((50, 50))
+        resize_img = image_array.resize(c.image_size)
         images.append(np.array(resize_img))
         labels.append(1)
     except AttributeError:
@@ -27,7 +28,7 @@ for i in uninfected:
     try:
         image = cv2.imread("cell_images/Uninfected/" + i)
         image_array = Image.fromarray(image, 'RGB')
-        resize_img = image_array.resize((50, 50))
+        resize_img = image_array.resize(c.image_size)
         images.append(np.array(resize_img))
         labels.append(0)
     except AttributeError:
@@ -43,6 +44,6 @@ print('Converted data to numpy arrays')
 np.save('Data/Cells', cells)
 np.save('Data/Labels', labels)
 
-print('Cells.npy and Labels.npy saved in Data')
+print('Cells.npy and Labels.npy saved in Data folder')
 
 print("Cells:", cells.shape, "Labels:", labels.shape)
