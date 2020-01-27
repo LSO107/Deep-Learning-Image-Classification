@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ca21b54d-ea40-4414-9c9c-48de8d53e299" name="Default Changelist" comment="" />
+    <list default="true" id="ca21b54d-ea40-4414-9c9c-48de8d53e299" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/build_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/evaluate_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/evaluate_model.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -59,27 +63,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="LabelData" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="ImageClassifier" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\leeok\Documents\Final Project\ImageClassifier\label_data.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="LoadTest" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="ImageClassifier" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -93,6 +76,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/LoadTest.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="build_model" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="ImageClassifier" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/build_model.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -146,10 +150,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.evaluate_model" />
+        <item itemvalue="Python.build_model" />
         <item itemvalue="Python.malaria_classification" />
         <item itemvalue="Python.LoadTest" />
         <item itemvalue="Python.CNN" />
-        <item itemvalue="Python.LabelData" />
       </list>
     </recent_temporary>
   </component>
@@ -195,38 +199,42 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="759" y="295" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1579995264121" />
-    <state width="1899" height="289" key="GridCell.Tab.0.bottom" timestamp="1580071287792">
+    <state width="1899" height="289" key="GridCell.Tab.0.bottom" timestamp="1580134705937">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="289" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1580071287792" />
-    <state width="1899" height="289" key="GridCell.Tab.0.center" timestamp="1580071287792">
+    <state width="1899" height="289" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1580134705937" />
+    <state width="1899" height="289" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1580134041706" />
+    <state width="1899" height="289" key="GridCell.Tab.0.center" timestamp="1580134705937">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="289" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1580071287792" />
-    <state width="1899" height="289" key="GridCell.Tab.0.left" timestamp="1580071287792">
+    <state width="1899" height="289" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1580134705937" />
+    <state width="1899" height="289" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1580134041706" />
+    <state width="1899" height="289" key="GridCell.Tab.0.left" timestamp="1580134705937">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="289" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1580071287792" />
-    <state width="1899" height="289" key="GridCell.Tab.0.right" timestamp="1580071287792">
+    <state width="1899" height="289" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1580134705937" />
+    <state width="1899" height="289" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1580134041706" />
+    <state width="1899" height="289" key="GridCell.Tab.0.right" timestamp="1580134705937">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="289" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1580071287792" />
-    <state width="1899" height="348" key="GridCell.Tab.1.bottom" timestamp="1580069000245">
+    <state width="1899" height="289" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1580134705937" />
+    <state width="1899" height="289" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1580134041706" />
+    <state width="1899" height="348" key="GridCell.Tab.1.bottom" timestamp="1580074869966">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1580069000245" />
-    <state width="1899" height="348" key="GridCell.Tab.1.center" timestamp="1580069000245">
+    <state width="1899" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1580074869966" />
+    <state width="1899" height="348" key="GridCell.Tab.1.center" timestamp="1580074869966">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="348" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1580069000245" />
-    <state width="1899" height="348" key="GridCell.Tab.1.left" timestamp="1580069000245">
+    <state width="1899" height="348" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1580074869966" />
+    <state width="1899" height="348" key="GridCell.Tab.1.left" timestamp="1580074869966">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="348" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1580069000245" />
-    <state width="1899" height="348" key="GridCell.Tab.1.right" timestamp="1580069000245">
+    <state width="1899" height="348" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1580074869966" />
+    <state width="1899" height="348" key="GridCell.Tab.1.right" timestamp="1580074869966">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1899" height="348" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1580069000245" />
+    <state width="1899" height="348" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1580074869966" />
     <state x="818" y="228" key="SettingsEditor" timestamp="1579995739942">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -239,5 +247,9 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="1920" y="46" width="1573" height="711" key="dock-window-2/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1580054519201" />
+    <state x="949" y="156" width="672" height="678" key="search.everywhere.popup" timestamp="1580073761520">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="949" y="156" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1580073761520" />
   </component>
 </project>
