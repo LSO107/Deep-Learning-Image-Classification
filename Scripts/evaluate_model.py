@@ -5,7 +5,7 @@ from Scripts import constants as c
 import numpy as np
 
 # Load model
-model = load_model("../Models/vgg16/1Model.h5")
+model = load_model("./Models/vgg16/1Model.h5")
 
 # Load images & labels
 cells = np.load(c.cells_path)
