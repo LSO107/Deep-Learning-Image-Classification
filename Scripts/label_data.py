@@ -1,12 +1,12 @@
 from PIL import Image
-import constants as c
+from Scripts import constants as c
 import numpy as np
 import cv2
 import os
 
 # File paths for data
-infected = os.listdir("cell_images/Parasitized/")
-uninfected = os.listdir("cell_images/Uninfected/")
+infected = os.listdir("../cell_images/Parasitized/")
+uninfected = os.listdir("../cell_images/Uninfected/")
 
 # Define arrays to store images & labels
 images = []

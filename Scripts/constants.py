@@ -7,8 +7,8 @@ test_ratio = 0.10
 class_names = ["Uninfected", "Infected"]
 
 # Paths for images & labels
-cells_path = 'Data/Cells.npy'
-labels_path = 'Data/Labels.npy'
+cells_path = '../Data/Cells.npy'
+labels_path = '../Data/Labels.npy'
 
 # Image size
 image_size = 64, 64

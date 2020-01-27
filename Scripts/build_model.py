@@ -1,9 +1,10 @@
+from keras.callbacks import EarlyStopping, ModelCheckpoint, ReduceLROnPlateau
 from keras.layers import MaxPooling2D, Conv2D, Flatten, Dense, Dropout
 from keras_preprocessing.image import ImageDataGenerator
 from sklearn.model_selection import train_test_split
 from keras.models import Sequential
+from Scripts import constants as c
 import matplotlib.pyplot as plt
-import constants as c
 import numpy as np
 import keras
 
@@ -70,19 +71,30 @@ training_dataset = train_datagen.flow(train_x, train_y, batch_size=32)
 validation_dataset = validation_datagen.flow(val_x, val_y, batch_size=32)
 testing_dataset = validation_datagen.flow(val_x, val_y, batch_size=32)
 
-# Add a callback to stop training early if condition is met
-es = keras.callbacks.EarlyStopping(monitor='val_loss',
-                                   min_delta=0,
-                                   patience=1,
-                                   verbose=0,
-                                   mode='auto')
+# Add callbacks to prevent overfitting
+es = EarlyStopping(monitor='val_loss',
+                   min_delta=0,
+                   patience=2,
+                   verbose=0,
+                   mode='auto')
+
+checkpoint = ModelCheckpoint("Model.h5")
 
 # Perform backpropagation and update weights in model
 history = model.fit_generator(training_dataset,
-                              epochs=100,
+                              epochs=50,
                               validation_data=validation_dataset,
-                              callbacks=[es])
+                              callbacks=[es, checkpoint])
 
 # Save model & weights
 model.save_weights("Model_weights.h5")
 model.save("Model.h5")
+
+# Plot accuracy graph
+plt.plot(history.history['accuracy'])
+plt.plot(history.history['val_accuracy'])
+plt.title('model accuracy')
+plt.ylabel('accuracy')
+plt.xlabel('epoch')
+plt.legend(['train', 'val'], loc='upper left')
+plt.show()
