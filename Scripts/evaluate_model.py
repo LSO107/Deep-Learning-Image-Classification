@@ -1,15 +1,22 @@
 from sklearn.model_selection import train_test_split
+from sklearn.metrics import log_loss
 from keras.models import load_model
-import matplotlib.pyplot as plt
+from keras.utils import plot_model
 from Scripts import constants as c
+import matplotlib.pyplot as plt
 import numpy as np
+import os
+
+# Set up path for GraphViz to work
+os.environ["PATH"] += os.pathsep + 'C:/Program Files (x86)/Graphviz2.38/bin/'
 
 # Load model
-model = load_model("./Models/vgg16/1Model.h5")
+model = load_model("./Models/vgg16_1.h5")
+# model = load_model("./Models/custom/Model.h5")
 
 # Load images & labels
-cells = np.load(c.cells_path)
-labels = np.load(c.labels_path)
+cells = np.load(os.path.join('./', c.cells_path))
+labels = np.load(os.path.join('./', c.labels_path))
 
 # Shuffle the entire dataset
 n = np.arange(cells.shape[0])
@@ -28,6 +35,10 @@ val_x, test_x, val_y, test_y = train_test_split(test_x, test_y, test_size=c.test
 print('Training data shape: ', train_x.shape)
 print('Validation data shape: ', val_x.shape)
 print('Testing data shape: ', test_x.shape)
+
+# Generate model visualisation
+print(model.summary())
+plot_model(model, to_file='model.png')
 
 # Plot graph to visualise predictions on testing data
 plt.figure(figsize=(10, 10))

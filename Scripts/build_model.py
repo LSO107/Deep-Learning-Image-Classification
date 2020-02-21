@@ -16,7 +16,7 @@ model = Sequential()
 cells = np.load(c.cells_path)
 labels = np.load(c.labels_path)
 
-# Shuffle the entire dataset
+# Shuffle the dataset indices
 n = np.arange(cells.shape[0])
 np.random.shuffle(n)
 

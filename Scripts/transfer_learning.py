@@ -1,5 +1,6 @@
 from keras.layers import MaxPooling2D, Conv2D, Flatten, Dense, Dropout
 from sklearn.model_selection import train_test_split
+from keras.callbacks import CSVLogger, EarlyStopping
 from keras.applications import VGG16
 from keras.optimizers import RMSprop
 from Scripts import constants as c
@@ -7,13 +8,14 @@ from keras.models import Model
 import matplotlib.pyplot as plt
 import numpy as np
 import keras
+import os
 
 # Clear session and instantiate model
 keras.backend.clear_session()
 
 # Load images & labels
-cells = np.load(c.cells_path)
-labels = np.load(c.labels_path)
+cells = np.load(os.path.join('../', c.cells_path))
+labels = np.load(os.path.join('../', c.labels_path))
 
 # Shuffle the entire dataset
 n = np.arange(cells.shape[0])
@@ -64,16 +66,18 @@ model.compile(optimizer=RMSprop(lr=0.0001),
               loss='binary_crossentropy',
               metrics=['accuracy'])
 
+logger = CSVLogger('../Logs/VGG_Log.csv', append=True, separator='|')
+
 # Fit the model
 history = model.fit(train_x, train_y,
-                    batch_size=600,
-                    epochs=150,
+                    batch_size=256,
+                    epochs=200,
                     validation_data=(val_x, val_y),
-                    shuffle=False)
+                    shuffle=False,
+                    callbacks=[logger])
 
 # Save model & weights
-model.save_weights("1Model_weights.h5")
-model.save("1Model.h5")
+model.save("VGG16_1.h5")
 
 # Plot accuracy graph
 plt.plot(history.history['accuracy'])
@@ -82,4 +86,13 @@ plt.title('model accuracy')
 plt.ylabel('accuracy')
 plt.xlabel('epoch')
 plt.legend(['train', 'val'], loc='upper right')
+plt.show()
+
+# Plot loss graph
+plt.plot(history.history['val_loss'])
+plt.plot(history.history['loss'])
+plt.title('Validation loss')
+plt.ylabel('Val loss')
+plt.xlabel('Epoch')
+plt.legend(['Val loss', 'loss'], loc='upper right')
 plt.show()
